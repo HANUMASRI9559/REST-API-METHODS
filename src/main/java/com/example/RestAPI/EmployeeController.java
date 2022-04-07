@@ -19,24 +19,24 @@ public class EmployeeController {
 
 	private static final String name = null;
 
-	// localhost:9099?name=max
+	// http://localhost:9099/name=max
 	@RequestMapping(value = "/Get", method = RequestMethod.GET)
 	public String Employeedetails(@RequestParam(value = "name", defaultValue = "KMC") String name) {
 		return "Employee" + name;
 	}
 
 	@RequestMapping(value = "/Create", method = RequestMethod.POST)
-	public String Employeedetails1(@RequestBody String name) {
+	public String Employeedetails1(@RequestBody String name , String id) {
 		return "Employee" + name;
 	}
 
 	@PutMapping(value = "/Update")
-	public String Employeedetails11(@RequestBody String name) {
+	public String Employeedetails11(@RequestBody String name , String id) {
 		return "Employee" + name;
 	}
 
 	@DeleteMapping(value = "/Delete")
-	public String Employeedetails111(@RequestBody String name) {
+	public String Employeedetails111(@RequestBody String name, String id) {
 		return "MESSAGE DELETED....";
 	}
 
