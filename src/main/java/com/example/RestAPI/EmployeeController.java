@@ -16,43 +16,33 @@ import org.springframework.web.bind.annotation.RestController;
 //@ResponseBody
 @RestController
 public class EmployeeController {
-	
+
 	private static final String name = null;
 
-
-	//localhost:9099?name=max
-	@RequestMapping(value ="/GetEmployee" , method = RequestMethod.GET)
-	public String Employeedetails(@RequestParam(value = "name", defaultValue="KMC")String name) {
+	// localhost:9099?name=max
+	@RequestMapping(value = "/Get", method = RequestMethod.GET)
+	public String Employeedetails(@RequestParam(value = "name", defaultValue = "KMC") String name) {
 		return "Employee" + name;
 	}
-	
-	@RequestMapping(value ="/CreateEmployee" , method = RequestMethod.POST)
+
+	@RequestMapping(value = "/Create", method = RequestMethod.POST)
 	public String Employeedetails1(@RequestBody String name) {
 		return "Employee" + name;
 	}
-		@PutMapping(value ="/UpdateEmployee")
-		public String Employeedetails11(@RequestBody String name)
-		{
-			return "Employee" + name;
-		}
-		
-		@DeleteMapping(value = "/DeleteEmployee")
-			public String Employeedetails111(@RequestBody String name)
-			{
-			 return "MESSAGE DELETED...." ;
-		    }
-		
-	
-	
-	
-	
-	
-	
+
+	@PutMapping(value = "/Update")
+	public String Employeedetails11(@RequestBody String name) {
+		return "Employee" + name;
+	}
+
+	@DeleteMapping(value = "/Delete")
+	public String Employeedetails111(@RequestBody String name) {
+		return "MESSAGE DELETED....";
+	}
 
 	private List<Employee> repositry() {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
 
 }
