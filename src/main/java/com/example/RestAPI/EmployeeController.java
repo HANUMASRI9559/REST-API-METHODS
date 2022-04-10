@@ -20,22 +20,22 @@ public class EmployeeController {
 
 	// http://localhost:9099/Get
 	@RequestMapping(value = "/Get", method = RequestMethod.GET)
-	public String Employeedetails(@RequestParam(value = "name", defaultValue = "KMC") String name) {
+	public String getEmployee(@RequestParam(value = "name", defaultValue = "KMC") String name) {
 		return "Employee" + name;
 	}
 
 	@PostMapping(value = "/Create")
-	public String Employeedetails1(@RequestBody String name) {
+	public String postEmployee(@RequestBody String name) {
 		return "Employee" + name;
 	}
 
 	@PutMapping(value = "/Update")
-	public String Employeedetails11(@RequestBody String name) {
+	public String putEmployee(@RequestBody String name) {
 		return "Employee" + name;
 	}
 
 	@DeleteMapping(value = "/Delete")
-	public String Employeedetails111(@RequestBody String name) {
+	public String deleteEmployee(@RequestBody String name) {
 		return "MESSAGE DELETED....";
 	}
 
